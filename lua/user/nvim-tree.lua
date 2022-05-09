@@ -97,23 +97,26 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
+  trash = {
+    cmd = "trash",
+    require_confirm = true,
+  },
   actions = {
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       window_picker = {
-        enable = true,
+            enable = false,
       },
     },
   },
-  -- quit_on_open = 0,
-  -- git_hl = 1,
-  -- disable_window_picker = 0,
-  -- root_folder_modifier = ":t",
-  -- show_icons = {
-  --   git = 1,
-  --   folders = 1,
-  --   files = 1,
-  --   folder_arrows = 1,
-  --   tree_width = 30,
-  -- },
+
+--  unknown options as of 22.05
+--
+--  update_to_buf_dir = {
+--    enable = true,
+--    auto_open = true,
+--  },
+--  auto_resize = true,
+--  git_hl = 1,
+--  root_folder_modifier = ":t",
 }
