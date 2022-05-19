@@ -15,8 +15,7 @@ local keymap = vim.api.nvim_set_keymap
 
 -- Normal --
 
-keymap('n', 'gh', ':lua _HTOP_TOGGLE()<cr>', opts)
-keymap('n', 'gs', ':source $MYVIMRC<cr>', opts)
+keymap('n', 'gs', '<Cmd>source $MYVIMRC<cr>', opts)
 
 -- Insert --
 
