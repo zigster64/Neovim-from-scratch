@@ -45,6 +45,7 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
+
 local lazygit = Terminal:new({
   cmd = "lazygit",
   direction = "float",
@@ -56,6 +57,19 @@ local lazygit = Terminal:new({
 
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
+end
+
+local dab_jl = Terminal:new({
+  cmd = "jl container",
+  direction = "float",
+  float_opts = {
+    border = "double",
+  },
+  hidden = true,
+})
+
+function _JL_TOGGLE()
+	dab_jl:toggle()
 end
 
 local node = Terminal:new({ cmd = "node", hidden = true })
