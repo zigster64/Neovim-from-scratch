@@ -16,6 +16,8 @@ local keymap = vim.api.nvim_set_keymap
 -- Normal --
 
 keymap('n', 'gs', '<Cmd>source $MYVIMRC<cr>', opts)
+keymap('n', 'M', '<Cmd>w!<cr>', opts)
+keymap('n', 'E', 'ciw', opts)
 
 -- Insert --
 
