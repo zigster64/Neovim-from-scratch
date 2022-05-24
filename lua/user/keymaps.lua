@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = true }
+change
 
 -- local term_opts = { silent = true }
 
@@ -38,6 +39,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+-- Save on M 
+keymap("n", "M", ":wa<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
