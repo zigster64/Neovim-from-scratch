@@ -20,7 +20,7 @@ vim.cmd [[
   augroup end
 
   augroup _auto_resize
-    autocmd!
+     autocmd!
     autocmd VimResized * tabdo wincmd = 
   augroup end
 
@@ -33,5 +33,5 @@ vim.cmd [[
 -- Autoformat
 -- augroup _lsp
 --   autocmd!
---   autocmd BufWritePre * lua vim.lsp.buf.formatting()
+--   autocmd BufWritePre * lua vim.lsp.buf.format{async = true}
 -- augroup end
