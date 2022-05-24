@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-change
 
 -- local term_opts = { silent = true }
 
