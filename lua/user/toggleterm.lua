@@ -72,6 +72,19 @@ function _JL_TOGGLE()
 	dab_jl:toggle()
 end
 
+local test_term = Terminal:new({
+  cmd = "runtests"
+  direction = "float",
+  float_opts = {
+    border = "double",
+  },
+  hidden = true,
+})
+
+function _TESTS_TOGGLE()
+	test_term:toggle()
+end
+
 local node = Terminal:new({ cmd = "node", hidden = true })
 
 function _NODE_TOGGLE()
