@@ -44,9 +44,7 @@ M.setup = function()
   })
 end
 
---[=[
-local function lsp_highlight_document_original(client)
-  -- Set autocommands conditional on server_capabilities
+local function lsp_highlight_document(client)
   -- if client.server_capabilities.document_highlight then
     local status_ok, illuminate = pcall(require, "illuminate")
     if not status_ok then
