@@ -44,6 +44,7 @@ M.setup = function()
   })
 end
 
+--[=[
 local function lsp_highlight_document_original(client)
   -- Set autocommands conditional on server_capabilities
   -- if client.server_capabilities.document_highlight then
@@ -54,6 +55,7 @@ local function lsp_highlight_document_original(client)
     illuminate.on_attach(client)
   -- end
 end
+]=]
 
 local function lsp_highlight_document(client)
   -- if client.server_capabilities.document_highlight then
