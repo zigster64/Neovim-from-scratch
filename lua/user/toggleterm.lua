@@ -73,7 +73,7 @@ function _JL_TOGGLE()
 end
 
 local test_term = Terminal:new({
-  cmd = "runtests"
+  cmd = "runtests",
   direction = "float",
   float_opts = {
     border = "double",
