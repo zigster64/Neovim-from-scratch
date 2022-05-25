@@ -100,7 +100,7 @@ end
 local htop = Terminal:new({
   cmd = "htop",
   hidden = true,
-  direction = horizontal,
+  direction = "float",
 })
 
 function _HTOP_TOGGLE()
