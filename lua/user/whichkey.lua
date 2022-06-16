@@ -80,6 +80,7 @@ local opts = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["d"] = { "<cmd>Telescope diagnostics<cr>", "Diagnostics"},
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -98,6 +99,7 @@ local mappings = {
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["x"] = { "<cmd>Telescope planets<cr>", "Planets"},
 
   p = {
     name = "Packer",
@@ -135,7 +137,7 @@ local mappings = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
+      "<cmd>Telescope diagnostics<cr>",
       "Document Diagnostics",
     },
     w = {
@@ -185,6 +187,11 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     z = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+
+  z = {
+	name = "Telescope",
+	p = { "<cmd>Telescope planets<cr>", "Planets"},
   },
 }
 
