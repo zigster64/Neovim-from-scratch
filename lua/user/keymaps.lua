@@ -18,12 +18,18 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- ZIG Terimante current editting line in insert mode
+keymap("i", "<C-s>", "<ESC>A;", opts)
+keymap("i", "<C-l>", "<ESC>llC, .{});<ESC>hhha", opts)
+keymap("i", "<C-'>", "<ESC>llC\", .{});<ESC>hhha", opts)
+
 -- Normal --
+
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- keymap("n", "<C-h>", "<C-w>h", opts)
+-- keymap("n", "<C-j>", "<C-w>j", opts)
+-- keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
 keymap("n", "<M-Up>", ":resize -2<CR>", opts)
@@ -41,6 +47,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Save on M
 keymap("n", "M", ":wa<CR>", opts)
+keymap("n", "M-S", ":wa<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
